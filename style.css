@@ -1,0 +1,1058 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    background-color: black;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+
+.LogoPage {
+    align-self: center;
+    margin-left: 10px;
+
+}
+
+.LogoPage img {
+    width: auto;
+    height: 50px;
+    display: block;
+}
+
+.LogoPage img:hover {
+    cursor: pointer;
+}
+
+.NavBar {
+    display: none;
+    width: 100%;
+    background: black;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.NavBar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.NavBar ul li {
+    margin: 15px 0;
+}
+
+.NavBar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+
+}
+
+.NavBar.active {
+    display: block;
+}
+
+.NavBar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: wheat;
+    transition: 0.3s;
+}
+
+.NavBar a:hover::after,
+.NavBar a.active::after {
+    width: 100%;
+}
+
+.NavBar a:hover {
+    color: wheat;
+    cursor: pointer;
+}
+
+.menu {
+    color: white;
+    font-size: 35px;
+    margin-right: 15px;
+    cursor: pointer
+}
+
+.hero_section {
+    display: flex;
+    flex-flow: wrap column;
+    padding: 100px 40px 100px;
+    margin: auto;
+    background-image: linear-gradient(to right, black, grey);
+    justify-content: center;
+    align-items: center;
+}
+
+.left_hero h1 {
+    text-align: center;
+    color: aqua;
+    margin-bottom: 50px;
+    font-size: 60px;
+    white-space: normal;
+    animation: "HeroH1" 3s ease-in-out forwards;
+}
+
+.left_hero p {
+    text-align: center;
+    color: whitesmoke;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.7;
+    font-size: 18px;
+    font-weight: bold;
+    animation: "HeroH1" 3s ease-in-out forwards;
+}
+
+.left_hero button {
+    display: block;
+    background-color: azure;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    animation: "HeroH1" 3s ease-in-out alternate forwards;
+    margin: 30px auto;
+}
+
+@keyframes HeroH1 {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.left_hero button:hover {
+    cursor: pointer;
+    background-color: aqua;
+}
+
+.right_hero img {
+
+    width: 350px;
+    height: auto;
+    border-radius: 25px;
+    animation: "Image_Hero" 3s ease-in-out alternate forwards;
+}
+
+#About {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    padding: 70px 44px;
+    flex-wrap: wrap;
+
+}
+
+.contentAbout {
+    margin: auto;
+    padding: 30px 0;
+}
+
+.contentAbout h2 {
+    font-size: 18px;
+    color: red;
+}
+
+.contentAbout h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.contentAbout p {
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    font-size: 19px;
+}
+
+.contentAbout .AboutBT {
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+}
+
+.AboutBT:hover {
+    cursor: pointer;
+    background-color: blue;
+
+}
+
+.sectionAbout {
+    display: flex;
+    flex-flow: wrap column;
+    margin: auto;
+    gap: 60px;
+}
+
+.sectionAbout div {
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.sectionAbout div:hover {
+    transform: translate(-10px, -15px);
+}
+
+.sectionAbout div h1 {
+    color: blue;
+    margin-bottom: 10px;
+}
+
+.sectionAbout div p {
+    margin-bottom: 10px;
+}
+
+#Features {
+    display: flex;
+    flex-flow: wrap column;
+    text-align: center;
+    padding: 70px 44px;
+
+}
+
+#Features .Feature_InternShip {
+    margin-bottom: 60px;
+}
+
+.Feature_InternShip h2 {
+    font-size: 22px;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.Feature_InternShip h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.Feature_InternShip p {
+    font-size: 16px;
+}
+
+.card {
+    display: flex;
+    flex-flow: wrap row;
+    gap: 25px;
+    margin: auto;
+
+}
+
+.Card_img {
+    width: 300px;
+    height: auto;
+    /* padding: 20px; */
+    border-radius: 30px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: auto;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.Card_img:hover {
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+.Card_img img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 30px 30px 0 0;
+
+}
+
+.Card_img h2 {
+    text-align: left;
+    padding: 15px;
+    font-size: 25px;
+}
+
+.Card_img p {
+    padding: 15px;
+    text-align: left;
+    font-size: 17px;
+}
+
+.Card_img button {
+    margin: 30px;
+    padding: 10px 30px;
+    text-align: left;
+    border: none;
+    border-radius: 25px;
+    background-color: blue;
+    color: white;
+
+}
+
+.Card_img button:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+#Contact {
+    background-image: linear-gradient(to left, black, rgba(71, 71, 71, 0.85));
+    display: flex;
+    flex-flow: wrap column;
+    padding: 70px 30px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.cont_content {
+    align-self: center;
+}
+
+.cont_content h1 {
+    color: aqua;
+    font-size: 50px;
+    margin-top: 50px;
+
+}
+
+.cont_content p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.form_Cod {
+    float: left;
+    width: 300px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 25px;
+    padding: 30px 20px;
+
+}
+
+.form_Cod #FirstName {
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.form_Cod #SecondName {
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 20px;
+    ;
+}
+
+.form_Cod #email {
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.form_Cod #content {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form_Cod #submit {
+    display: block;
+    margin: 25px auto;
+    background-color: green;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+}
+
+.form_Cod #submit:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    padding: 80px;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+
+.codveda_fot_img img {
+    width: auto;
+    height: 50px;
+}
+
+.codveda_fot_img p {
+    white-space: normal;
+    word-wrap: break-word;
+    width: 300px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 20px 0 30px 0;
+
+}
+
+.codveda_fot_img span {
+    padding-right: 50px;
+
+
+}
+
+.codveda_fot_img span:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.Quick_links,
+.course_foot,
+.Contact_us {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: wrap column;
+
+}
+
+.Quick_links h1,
+.course_foot h1,
+.Contact_us h1 {
+    margin-bottom: 20px;
+}
+
+.Quick_links a,
+.course_foot a,
+.Contact_us a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.632);
+    line-height: 2;
+}
+
+.Quick_links a:hover,
+.course_foot a:hover,
+.Contact_us a:hover {
+    color: aqua;
+}
+
+@media (min-width: 768px) and (max-width:992px) {
+   
+    .right_hero img {
+
+        width: 500px;
+        height: auto;
+        border-radius: 25px;
+        animation: "Image_Hero" 3s ease-in-out alternate forwards;
+    }
+    .sectionAbout {
+        display: flex;
+        flex-flow: wrap row;
+        margin: auto;
+        gap: 60px;
+    }
+    #footer {
+        background-color: black;
+        color: white;
+        padding: 80px;
+        margin: auto;
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+
+    .Quick_links,
+    .course_foot,
+    .Contact_us {
+        margin-left: 20px;
+        margin-top: 50px;
+        display: flex;
+        flex-flow: wrap column;
+
+    }
+
+}
+
+@media (min-width:993px) and (max-width:1280px) {
+      .right_hero img {
+
+        width: 600px;
+        height: auto;
+        border-radius: 25px;
+        animation: "Image_Hero" 3s ease-in-out alternate forwards;
+    }
+    .sectionAbout {
+        display: flex;
+        flex-flow: wrap row;
+        margin: auto;
+        gap: 60px;
+    }
+    #footer {
+        background-color: black;
+        color: white;
+        padding: 80px;
+        margin: auto;
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    .Quick_links,
+    .course_foot,
+    .Contact_us {
+        margin-left: 20px;
+        margin-top: 50px;
+        display: flex;
+        flex-flow: wrap column;
+
+    }
+}
+
+@media only screen and (min-width: 1281px) {
+
+
+    .LogoPage {
+        align-self: center;
+        margin-left: 50px;
+    }
+
+    .LogoPage img {
+        width: auto;
+        height: 50px;
+    }
+
+    .LogoPage img:hover {
+        cursor: pointer;
+    }
+
+    .NavBar {
+        display: flex;
+        align-self: center;
+        margin-right: 100px;
+        width: auto;
+
+    }
+
+    .NavBar a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px 0;
+        position: relative;
+    }
+
+    .NavBar ul {
+        list-style: none;
+        display: flex;
+        gap: 35px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    /*Hero Section*/
+    .hero_section {
+        display: flex;
+        flex-flow: wrap row;
+        padding: 200px 10px;
+        margin: auto;
+        background-image: linear-gradient(to right, black, grey);
+    }
+
+    .left_hero h1 {
+        text-align: left;
+        color: aqua;
+        margin-bottom: 70px;
+        font-size: 60px;
+        white-space: normal;
+        word-wrap: break-word;
+        width: 650px;
+        animation: "HeroH1" 3s ease-in-out forwards;
+    }
+
+    .left_hero p {
+        text-align: left;
+        color: whitesmoke;
+        white-space: normal;
+        word-wrap: break-word;
+        line-height: 1.6;
+        max-width: 550px;
+        font-weight: bold;
+        animation: "HeroH1" 3s ease-in-out forwards;
+
+
+    }
+
+    .left_hero {
+        align-self: center;
+    }
+
+    .left_hero button {
+        display: inline;
+        background-color: azure;
+        padding: 10px 20px;
+        margin-top: 30px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 14px;
+        animation: "HeroH1" 3s ease-in-out alternate forwards;
+
+    }
+
+    @keyframes HeroH1 {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .left_hero button:hover {
+        cursor: pointer;
+        background-color: aqua;
+    }
+
+    .right_hero {
+        align-self: center;
+    }
+
+    .right_hero img {
+        width: 600px;
+        height: auto;
+        border-radius: 25px;
+        animation: "Image_Hero" 3s ease-in-out alternate forwards;
+    }
+
+    @keyframes Image_Hero {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #About {
+        display: flex;
+        text-align: center;
+        margin: auto;
+        padding: 70px;
+        flex-flow: wrap column;
+
+    }
+
+    .contentAbout {
+        margin: auto;
+        padding: 30px;
+    }
+
+    .contentAbout h2 {
+        font-size: large;
+        color: red;
+    }
+
+    .contentAbout h1 {
+        font-size: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .contentAbout p {
+        white-space: normal;
+        word-wrap: break-word;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        font-size: 19px;
+    }
+
+    .contentAbout .AboutBT {
+        margin-top: 20px;
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        border: none;
+    }
+
+    .AboutBT:hover {
+        cursor: pointer;
+        background-color: blue;
+
+    }
+
+    .sectionAbout {
+        display: flex;
+        flex-flow: wrap;
+        margin: auto;
+        gap: 60px;
+    }
+
+    .sectionAbout div {
+        width: 350px;
+        padding: 20px;
+        border-radius: 12px;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        margin: auto;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .sectionAbout div:hover {
+        transform: translate(-10px, -15px);
+    }
+
+    .sectionAbout div h1 {
+        font-size: 40px;
+        margin: auto;
+        color: blue;
+        margin-bottom: 10px;
+    }
+
+    .sectionAbout div p {
+        margin: auto;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    #Features {
+        display: flex;
+        flex-flow: wrap column;
+        text-align: center;
+        padding: 90px;
+
+    }
+
+    #Features .Feature_InternShip {
+        margin-bottom: 60px;
+        line-height: 1.6;
+    }
+
+    .Feature_InternShip h2 {
+        font-size: large;
+        color: red;
+    }
+
+    .Feature_InternShip h1 {
+        margin-bottom: 20px;
+        font-size: 40px;
+    }
+
+    .Feature_InternShip p {
+        font-size: 18px;
+    }
+
+    .card {
+        display: flex;
+        flex-flow: wrap row;
+        gap: 25px;
+        margin: auto;
+
+
+    }
+
+    .Card_img {
+        width: 300px;
+        height: auto;
+        /* padding: 20px; */
+        border-radius: 30px;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        margin: auto;
+        transition: transform 0.5s ease-in-out;
+
+    }
+
+    .Card_img:hover {
+        box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+
+    }
+
+    .Card_img img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 30px 30px 0 0;
+
+    }
+
+    .Card_img h2 {
+        text-align: left;
+        padding: 15px;
+        font-size: 25px;
+    }
+
+    .Card_img p {
+        padding: 15px;
+        text-align: left;
+        font-size: 17px;
+    }
+
+    .Card_img button {
+        margin: 30px;
+        padding: 10px 30px;
+        text-align: left;
+        border: none;
+        border-radius: 25px;
+        background-color: blue;
+        color: white;
+
+    }
+
+    .Card_img button:hover {
+        cursor: pointer;
+        background-color: green;
+    }
+
+    #Contact {
+        background-image: linear-gradient(to left, black, rgba(71, 71, 71, 0.85));
+        display: flex;
+        flex-flow: wrap column;
+        padding: 90px;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .cont_content h1 {
+        color: aqua;
+        font-size: 70px;
+        margin-top: 70px;
+
+    }
+
+    .cont_content p {
+        color: white;
+        font-size: large;
+        text-align: center;
+    }
+
+    .form_Cod {
+        width: 550px;
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background: white;
+        border-radius: 25px;
+        padding: 50px;
+
+    }
+
+    .form_Cod #FirstName {
+        width: 45%;
+        border-radius: 10px;
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+
+    .form_Cod #SecondName {
+        width: 45%;
+        border-radius: 10px;
+        padding: 12px;
+        margin-left: 12px;
+        margin-bottom: 20px;
+    }
+
+    .form_Cod #email {
+        width: 94%;
+        border-radius: 10px;
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+
+    .form_Cod #content {
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .form_Cod #submit {
+
+        display: block;
+        margin: 25px auto;
+        background-color: green;
+        color: white;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 25px;
+        font-size: 18px;
+    }
+
+    .form_Cod #submit:hover {
+        background-color: red;
+        cursor: pointer;
+    }
+
+    #footer {
+        background-color: black;
+        color: white;
+        padding: 80px;
+        margin: auto;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    .codveda_fot_img img {
+        width: auto;
+        height: 50px;
+    }
+
+    .codveda_fot_img p {
+        white-space: normal;
+        word-wrap: break-word;
+        width: 300px;
+        font-size: 18px;
+        line-height: 1.7;
+        margin: 20px 0 30px 0;
+
+    }
+
+    .codveda_fot_img span {
+        padding-right: 50px;
+    }
+
+    .codveda_fot_img span:hover {
+        color: aqua;
+        cursor: pointer;
+    }
+
+    .Quick_links {
+        display: flex;
+        flex-flow: wrap column;
+
+    }
+
+    .Quick_links h1 {
+        margin-bottom: 20px;
+        font-size: 34px;
+    }
+
+    .Quick_links a {
+        text-decoration: none;
+        margin-top: 50px;
+        color: rgba(255, 255, 255, 0.632);
+
+        line-height: 2;
+    }
+
+    .Quick_links a:hover {
+        color: aqua;
+    }
+
+    .course_foot h1 {
+
+        margin-bottom: 20px;
+        font-size: 34px;
+
+    }
+
+    .course_foot {
+        display: flex;
+        flex-flow: wrap column;
+
+    }
+
+    .course_foot a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.632);
+        line-height: 2;
+    }
+
+    .course_foot a:hover {
+        color: aqua;
+    }
+
+    .Contact_us {
+        display: flex;
+        flex-flow: wrap column;
+
+    }
+
+    .Contact_us h1 {
+        margin-bottom: 20px;
+        font-size: 34px;
+    }
+
+    .Contact_us a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.632);
+        line-height: 2;
+        cursor: default;
+    }
+
+    .Contact_us a:hover {
+        color: aqua;
+    }
+}
