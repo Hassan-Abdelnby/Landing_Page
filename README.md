@@ -21,5 +21,6 @@ This project was developed as **Task 1 (Responsive Landing Page)** during my int
 It demonstrates my ability to design and implement responsive, accessible, and well-structured web interfaces.  
 
 ## 📬 Contact
+- 👤 [Hassan Abdelnby Hassan]
 - 💼 Front-End Developer Intern @ Codveda Technologies  
 - 🔗 [LinkedIn Profile](www.linkedin.com/in/hassan-a-hassan)
